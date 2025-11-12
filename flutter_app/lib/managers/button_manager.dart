@@ -36,10 +36,9 @@ class ButtonManager {
       _firstButtonId = button.id;
       _flag = true;
       result['firstClick'] = true;
-      return result;
     }
 
-    // Второй клик - проверяем совпадение
+    // Проверяем совпадение (count_button != 1 означает, что это не первый клик)
     if (button.letter == _firstButtonValue && _clickCount != 1) {
       _matchCount++;
       result['match'] = true;
